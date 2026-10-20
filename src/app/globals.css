@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-ink:   #0E0C13;
+    --color-gold:  #C8952E;
+    --color-rose:  #EC7DAE;
+    --color-sky:   #5CB6EE;
+    --color-cream: #FBF8F2;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* compensa el navbar sticky */
+  }
+
+  body {
+    @apply bg-white text-ink-500 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-ink-900 font-heading font-semibold tracking-tight;
+  }
+
+  /* Accesibilidad: foco visible */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold-500;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Texto dorado metálico (como el logo) */
+  .text-gold-gradient {
+    background: linear-gradient(100deg, #F3DC9A 0%, #DAAE4C 35%, #B8862A 60%, #EFD28A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Botones */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full
+           px-6 py-3 text-sm font-semibold text-ink-900
+           shadow-lg shadow-gold-900/20
+           transition-all duration-200 hover:brightness-110 active:scale-[0.98];
+    background: linear-gradient(100deg, #EFD28A 0%, #DAAE4C 45%, #C8952E 100%);
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full
+           border border-white/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white
+           backdrop-blur-sm transition-all duration-200
+           hover:border-gold-400/70 hover:bg-white/10;
+  }
+
+  .btn-white {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full
+           bg-white px-6 py-3 text-sm font-semibold text-ink-900
+           shadow-sm ring-1 ring-ink-900/10 transition-all duration-200
+           hover:ring-gold-400 hover:shadow-md active:scale-[0.98];
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full
+           bg-ink-900 px-6 py-3 text-sm font-semibold text-white
+           shadow-lg shadow-ink-900/20 transition-all duration-200
+           hover:bg-ink-700 active:scale-[0.98];
+  }
+
+  /* Layout */
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-24;
+  }
+
+  /* Tipografía */
+  .section-label {
+    @apply inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-gold-600;
+  }
+
+  .section-heading {
+    @apply text-3xl font-bold tracking-tight text-ink-900 sm:text-4xl lg:text-[2.75rem] font-heading leading-tight;
+  }
+
+  .section-subheading {
+    @apply mt-4 text-lg text-ink-400 leading-relaxed;
+  }
+
+  /* Línea decorativa rosa → azul, como la cinta del logo */
+  .ribbon-line {
+    @apply block h-px w-8;
+    background: linear-gradient(90deg, #EC7DAE, #5CB6EE);
+  }
+}
