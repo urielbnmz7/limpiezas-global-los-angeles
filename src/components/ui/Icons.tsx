@@ -93,3 +93,10 @@ export const SprayIcon = ({ className = 'w-6 h-6' }: P) => (
     <path d="M19 4h.01M20.5 6.5h.01M19 9h.01" />
   </svg>
 );
+
+export const BuildingIcon = ({ className = 'w-6 h-6' }: P) => (
+  <svg className={className} {...base}>
+    <path d="M3 21h18M5 21V8l7-4v17M12 21V10l7 3v8" />
+    <path d="M8 10h1M8 13h1M8 16h1M15 15h1M15 18h1" />
+  </svg>
+);

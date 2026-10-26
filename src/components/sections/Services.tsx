@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { telHref } from '@/config/site';
-import { BroomIcon, SparklesHomeIcon, CheckIcon, ArrowIcon } from '@/components/ui/Icons';
+import { BroomIcon, SparklesHomeIcon, BuildingIcon, CheckIcon, ArrowIcon } from '@/components/ui/Icons';
 
 // Estilo por tarjeta: Ligera = azul cielo, Profunda = rosa (destacada)
 const styles = [
@@ -21,6 +21,14 @@ const styles = [
     icon: 'text-rose-500',
     check: 'text-rose-500',
     cta: 'bg-rose-500 text-white hover:bg-rose-600',
+  },
+  {
+    Icon: BuildingIcon,
+    ring: 'ring-1 ring-ink-900/5 shadow-ink-900/5',
+    header: 'from-gold-100 to-gold-300',
+    icon: 'text-gold-600',
+    check: 'text-gold-600',
+    cta: 'bg-gold-50 text-gold-700 hover:bg-gold-100',
   },
 ];
 
@@ -41,15 +49,20 @@ export default function Services() {
         </div>
 
         {/* Tarjetas */}
-        <div className="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2 lg:gap-8">
+        <div className="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {t.services.items.map((item, i) => {
             const s = styles[i];
             const featured = i === 1;
             return (
               <article
                 key={item.title}
-                className={`relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-xl transition-transform duration-300 hover:-translate-y-1 ${s.ring}`}
+                className={`relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-xl transition-transform duration-300 hover:-translate-y-1 ${s.ring} ${i === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
               >
+                {i === 2 && (
+                  <span className="absolute right-4 top-4 z-10 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gold-700">
+                    {t.services.new_label}
+                  </span>
+                )}
                 {featured && (
                   <span className="absolute right-4 top-4 z-10 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-rose-600">
                     {t.services.popular}
@@ -69,7 +82,11 @@ export default function Services() {
                   <p className="mt-7 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-400">
                     {t.services.includes}
                   </p>
-                  <ul className="mt-4 grid flex-1 content-start gap-x-4 gap-y-3 sm:grid-cols-2">
+                  <ul
+                    className={`mt-4 grid flex-1 content-start gap-x-4 gap-y-3 sm:grid-cols-2 ${
+                      i === 2 ? 'lg:grid-cols-1' : 'md:grid-cols-1'
+                    }`}
+                  >
                     {item.details.map((d) => (
                       <li key={d} className="flex items-start gap-2 text-[0.95rem] text-ink-600">
                         <CheckIcon className={`mt-1 w-3.5 h-3.5 flex-shrink-0 ${s.check}`} />

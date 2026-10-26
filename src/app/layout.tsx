@@ -8,13 +8,13 @@ import Providers from './providers';
 import { site } from '@/config/site';
 
 const description =
-  'Reliable, detailed house and apartment cleaning in Salt Lake City, Utah and surrounding areas. Standard and deep cleaning done with care and respect. Call or text ' +
+  'Reliable, detailed cleaning for homes, businesses and industrial spaces in Salt Lake City, Utah and surrounding areas. Standard, deep, commercial and industrial cleaning done with care and respect. Call or text ' +
   site.phone.display +
   '. Hablamos español.';
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | House Cleaning in Salt Lake City, UT`,
+    default: `${site.name} | Home & Commercial Cleaning in Salt Lake City, UT`,
     template: `%s | ${site.shortName}`,
   },
   description,
@@ -25,9 +25,14 @@ export const metadata: Metadata = {
     'home cleaning Utah',
     'maid service Salt Lake City',
     'cleaning service near me',
+    'commercial cleaning Salt Lake City',
+    'office cleaning Salt Lake City',
+    'industrial cleaning Utah',
+    'warehouse cleaning Salt Lake City',
     'limpieza de casas Salt Lake City',
     'limpieza profunda Utah',
     'servicio de limpieza en español Utah',
+    'limpieza comercial e industrial Utah',
     ...site.location.areasServed.map((c) => `house cleaning ${c}`),
   ],
   metadataBase: new URL(site.url),
@@ -43,13 +48,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: 'es_US',
     siteName: site.name,
-    title: `${site.name} — House Cleaning in Salt Lake City`,
+    title: `${site.name} — Residential & Commercial Cleaning in Salt Lake City`,
     description,
     images: [{ url: '/images/og-image.jpg', width: 1200, height: 630, alt: site.name }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${site.name} — House Cleaning in Salt Lake City`,
+    title: `${site.name} — Residential & Commercial Cleaning in Salt Lake City`,
     description,
     images: ['/images/og-image.jpg'],
   },
@@ -92,6 +97,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 itemListElement: [
                   { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Standard House Cleaning' } },
                   { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Deep Cleaning' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial & Industrial Cleaning' } },
                   { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Custom Cleaning' } },
                 ],
               },

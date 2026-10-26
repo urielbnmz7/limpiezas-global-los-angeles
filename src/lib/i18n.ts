@@ -16,10 +16,10 @@ const en = {
     headline_1: 'Reliable, detailed cleaning',
     headline_accent: 'for your home',
     subheadline:
-      'Houses and apartments cleaned with care and respect. We treat your home as if it were our own.',
+      'Homes, businesses and industrial spaces cleaned with care and respect. We treat every space as if it were our own.',
     cta_call: 'Call',
     cta_text: 'Send a text',
-    trust: ['Houses & apartments', 'Standard & deep cleaning', 'English & Spanish', 'Care & respect'],
+    trust: ['Homes, businesses & industry', 'Standard, deep & commercial', 'English & Spanish', 'Care & respect'],
     image_alt: 'Cleaning professional vacuuming a bright living room',
     badges: [
       { title: 'Reliable', desc: 'Salt Lake City' },
@@ -29,11 +29,12 @@ const en = {
   services: {
     label: 'Our Services',
     title_pre: 'Cleaning plans for ',
-    title_accent: 'every home',
+    title_accent: 'every space',
     subtitle:
-      'Choose the level of cleaning your home needs. Every visit is done with attention to detail.',
+      'Choose the cleaning your home or business needs. Every visit is done with attention to detail.',
     includes: 'What’s included',
     popular: 'Most complete',
+    new_label: 'New',
     cta: 'Request a quote',
     items: [
       {
@@ -60,11 +61,23 @@ const en = {
           'High-touch areas: door handles & light switches',
         ],
       },
+      {
+        title: 'Commercial & Industrial',
+        desc: 'Top-to-bottom cleaning for any space — commercial and industrial.',
+        details: [
+          'Offices & retail spaces',
+          'Warehouses & industrial areas',
+          'Floors, restrooms & break rooms',
+          'Common & high-traffic areas',
+          'Surface disinfection',
+          'Top-to-bottom cleaning',
+        ],
+      },
     ],
   },
   custom: {
     title: 'Need something different?',
-    body: 'We offer the cleaning service you need. Tell us about your home and we’ll tailor a service that fits you.',
+    body: 'We offer the cleaning service you need. Tell us about your space and we’ll tailor a service that fits you.',
     cta: 'Contact us',
   },
   why: {
@@ -124,10 +137,10 @@ const es: T = {
     headline_1: 'Limpieza confiable y detallada',
     headline_accent: 'para tu hogar',
     subheadline:
-      'Casas y apartamentos limpios con mucho cuidado y respeto. Tratamos tu hogar como si fuera el nuestro.',
+      'Hogares, negocios y espacios industriales limpios con mucho cuidado y respeto. Tratamos cada espacio como si fuera el nuestro.',
     cta_call: 'Llamar',
     cta_text: 'Enviar mensaje',
-    trust: ['Casas y apartamentos', 'Limpieza ligera y profunda', 'Inglés y español', 'Cuidado y respeto'],
+    trust: ['Hogares, negocios e industria', 'Ligera, profunda y comercial', 'Inglés y español', 'Cuidado y respeto'],
     image_alt: 'Profesional de limpieza aspirando una sala luminosa',
     badges: [
       { title: 'Confiables', desc: 'Salt Lake City' },
@@ -137,11 +150,12 @@ const es: T = {
   services: {
     label: 'Nuestros servicios',
     title_pre: 'Limpieza para ',
-    title_accent: 'cada hogar',
+    title_accent: 'cada espacio',
     subtitle:
-      'Elige el nivel de limpieza que tu hogar necesita. Cada visita se hace con atención al detalle.',
+      'Elige la limpieza que tu hogar o negocio necesita. Cada visita se hace con atención al detalle.',
     includes: 'Qué incluye',
     popular: 'La más completa',
+    new_label: 'Nuevo',
     cta: 'Pedir cotización',
     items: [
       {
@@ -168,11 +182,23 @@ const es: T = {
           'Áreas de alto contacto: manijas e interruptores',
         ],
       },
+      {
+        title: 'Comercial e Industrial',
+        desc: 'Limpieza de arriba a abajo de cualquier espacio, comercial e industrial.',
+        details: [
+          'Oficinas y locales comerciales',
+          'Bodegas y áreas industriales',
+          'Pisos, baños y comedores',
+          'Áreas comunes y de alto tráfico',
+          'Desinfección de superficies',
+          'Limpieza de arriba a abajo',
+        ],
+      },
     ],
   },
   custom: {
     title: '¿Necesitas algo diferente?',
-    body: 'Ofrecemos el servicio de limpieza que usted necesite. Cuéntanos sobre tu hogar y armamos un servicio a tu medida.',
+    body: 'Ofrecemos el servicio de limpieza que usted necesite. Cuéntanos sobre tu espacio y armamos un servicio a tu medida.',
     cta: 'Contáctanos',
   },
   why: {
